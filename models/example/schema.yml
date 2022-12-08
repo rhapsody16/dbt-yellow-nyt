@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: nytaxi
+    schema: nytaxi
+    description: A raw data that put all of Yellow Taxi 2019 part into staging area
+    tables:
+      - name: yellow_tripdata_2019-01
+        identifier: yellow_tripdata_2019-01
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
